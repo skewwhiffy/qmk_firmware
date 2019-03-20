@@ -197,9 +197,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
   [nal] = LAYOUT_ortho_4x12( \
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
-    DF(dv),  UK_PAUS, UK_SLCK, UK_PSCR, RGB_TOG, RGB_HUI, RGB_RMOD,RGB_HUD, _C_RGHT, UK_UP,   _C_LEFT, UK_ESC,  \
+    DF(qw),  UK_PGDN, UK_END,  UK_SLCK, _______, RGB_VAI, RGB_VAD, _______, __NAL,   IJ_OMN,  _A_LEFT, _S_TAB,  \
     _TERM,   UK_PGUP, UK_HOME, UK_INS,  DF(cm),  RGB_SAI, RGB_SAD, RGB_MOD, UK_RGHT, UK_DOWN, UK_LEFT, UK_TAB,  \
-    DF(qw),  UK_PGDN, UK_END,  UK_SLCK, _______, RGB_VAI, RGB_VAD, _______, __NAL,   IJ_OMN,  _A_LEFT, _S_TAB   \
+    DF(dv),  UK_PAUS, UK_SLCK, UK_PSCR, RGB_TOG, RGB_HUI, RGB_RMOD,RGB_HUD, _C_RGHT, UK_UP,   _C_LEFT, UK_ESC   \
   ),
   [nar] = LAYOUT_ortho_4x12( \
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
