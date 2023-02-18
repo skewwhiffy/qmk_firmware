@@ -754,6 +754,9 @@
     "delilah": {
         "target": "rainkeebs/delilah"
     },
+    "diverge2": {
+        "target": "unikeyboard/diverge2"
+    },
     "diverge3": {
         "target": "unikeyboard/diverge3"
     },
