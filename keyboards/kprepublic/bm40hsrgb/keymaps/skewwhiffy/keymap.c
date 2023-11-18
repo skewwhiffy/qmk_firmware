@@ -137,13 +137,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * '----------------------------------------------------------------------------------------------------------------'
  */
   [nal] = LAYOUT_planck_mit(
-    _VIM_ESC,  _C_LEFT, KC_UP,   _C_RGHT, _______, RGB_HUI, RGB_TOG, _______, KC_PSCR, KC_SCRL, KC_PAUS, KC_ESC,
+    KC_ESC,    _C_LEFT, KC_UP,   _C_RGHT, _______, RGB_HUI, RGB_TOG, _______, KC_PSCR, KC_SCRL, KC_PAUS, _VIM_ESC,
     KC_TAB,    KC_LEFT, KC_DOWN, KC_RGHT, _______, RGB_SAI, _______, _______, KC_INS,  KC_HOME, KC_PGUP, _TERM,
     _S_TAB,    _A_LEFT, _______, __NAL,   _______, RGB_VAI, QK_BOOT, _______, KC_DEL,  KC_END,  KC_PGDN, _______,
     _______,   _______, _______, _______, _______,       RGB_MOD,    _______, _______, _______, _______, _______
   ),
   [nar] = LAYOUT_planck_mit(
-    _VIM_ESC,  _C_LEFT, KC_UP,   _C_RGHT, _______, RGB_HUI, RGB_TOG, _______, KC_PSCR, KC_SCRL, KC_PAUS, KC_ESC,
+    KC_ESC,    _C_LEFT, KC_UP,   _C_RGHT, _______, RGB_HUI, RGB_TOG, _______, KC_PSCR, KC_SCRL, KC_PAUS, _VIM_ESC,
     KC_TAB,    KC_LEFT, KC_DOWN, KC_RGHT, _______, RGB_SAI, _______, _______, KC_INS,  KC_HOME, KC_PGUP, _TERM,
     _S_TAB,    _A_LEFT, _______, _A_RGHT, _______, RGB_VAI, QK_BOOT, _______, __NAR,   KC_END,  KC_PGDN, _______,
     _______,   _______, _______, _______, _______,      RGB_MOD,     _______, _______, _______, _______, _______
