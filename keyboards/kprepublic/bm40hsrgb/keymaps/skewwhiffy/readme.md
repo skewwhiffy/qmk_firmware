@@ -23,3 +23,13 @@ Used to access symbols. Hold down C or < to access.
 ## Navigation layer
 
 Used to access navigation and RGB control keys. Hold down V or M to access.
+
+## Flash
+
+Make example for this keyboard (after setting up your build environment):
+
+    make kprepublic/bm40hsrgb:skewwhiffy
+
+Flashing example for this keyboard:
+
+    make kprepublic/bm40hsrgb:skewwhiffy:flash
