@@ -10,8 +10,6 @@
 // entirely and just use numbers.
 enum Layers {
   cm, // colemak
-  dv, // dvorak
-  qw, // qwerty
   nbl, // numbers left
   nbr, // numbers right
   syl, // symbols left
@@ -47,19 +45,19 @@ enum Layers {
 
 // Custom hotkeys
 #define _TERM LCTL(UK_QUOT) // Hotkey for terminal
-#define _S_TAB S(UK_TAB)
-#define _C_LEFT LCTL(UK_LEFT)
-#define _C_RGHT LCTL(UK_RGHT)
-#define _A_LEFT LALT(UK_LEFT)
-#define _A_RGHT LALT(UK_RGHT)
+#define _S_TAB S(KC_TAB)
+#define _C_LEFT LCTL(KC_LEFT)
+#define _C_RGHT LCTL(KC_RGHT)
+#define _A_LEFT LALT(KC_LEFT)
+#define _A_RGHT LALT(KC_RGHT)
 
 // Custom hotkeys
 #define _TERM LCTL(UK_QUOT) // Hotkey for terminal
-#define _S_TAB S(UK_TAB)
-#define _C_LEFT LCTL(UK_LEFT)
-#define _C_RGHT LCTL(UK_RGHT)
-#define _A_LEFT LALT(UK_LEFT)
-#define _A_RGHT LALT(UK_RGHT)
+#define _S_TAB S(KC_TAB)
+#define _C_LEFT LCTL(KC_LEFT)
+#define _C_RGHT LCTL(KC_RGHT)
+#define _A_LEFT LALT(KC_LEFT)
+#define _A_RGHT LALT(KC_RGHT)
 
 enum custom_keycodes {
   IJ_OMN = SAFE_RANGE // IntelliJ Omnibox
@@ -82,45 +80,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    UK_Q,    UK_W,    UK_F,    UK_P,    UK_G,                      UK_J,    UK_L,    UK_U,    UK_Y,    UK_SCLN, \
    UK_A,    UK_R,    UK_S,    UK_T,    UK_D,                      UK_H,    UK_N,    UK_E,    UK_I,    UK_O, \
    _Z_SFT,  _X_NB,   _C_SY,   _V_NAL,  UK_B,                      UK_K,    _M_NAR,  _COM_SY, _DOT_NB, _SLSH, \
-   UK_LSFT, UK_LCTL, UK_LALT, UK_LGUI, UK_SPC,  UK_ENT,  UK_DEL,  UK_BSPC, UK_RGUI, UK_RALT, UK_RCTL, UK_RSFT \
- ),
-
-/* Dvorak
- * .---------------------------------------------                 ---------------------------------------------.
- * | '      | ,      | .      | P      | Y      |                 | F      | G      | C      | R      | L      |
- * |---------------------------------------------                 ---------------------------------------------|
- * | A      | O      | E      | U      | I      |                 | D      | H      | T      | N      | S      |
- * |---------------------------------------------                 ---------------------------------------------|
- * | ;      | Q      | J      | K      | X      |                 | B      | M      | W      | V      | Z      |
- * | SHIFT  | NUMBER | SYMBOL | NAV    |        |                 |        | NAV    | SYMBOL | FUNC   | SHIFT  |
- * |-----------------------------------------------------------------------------------------------------------|
- * |        |        |        |        |        |        |        |        |        |        |        |        |
- * |-----------------------------------------------------------------------------------------------------------|
- */
- [dv] = LAYOUT( \
-   UK_QUOT, UK_COMM, UK_DOT,  UK_P,    UK_Y,                      UK_F,    UK_G,    UK_C,    UK_R,    UK_L, \
-   UK_A,    UK_O,    UK_E,    UK_U,    UK_I,                      UK_D,    UK_H,    UK_T,    UK_N,    UK_S, \
-   _SCLSH,  _Q_NB,   _J_SY,   _K_NAL,  UK_X,                      UK_B,    _M_NAR,  _W_SY,   _V_NB,   _Z_SFT, \
-   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
- ),
-
-/* QWERTY
- * .---------------------------------------------                 ---------------------------------------------.
- * | Q      | W      | E      | R      | T      |                 | Y      | U      | I      | O      | P      |
- * |---------------------------------------------                 ---------------------------------------------|
- * | A      | S      | D      | F      | G      |                 | H      | J      | K      | L      | ;      |
- * |---------------------------------------------                 ---------------------------------------------|
- * | Z      | X      | C      | V      | B      |                 | N      | M      | ,      | .      | /      |
- * | SHIFT  | NUMBER | SYMBOL | NAV    |        |                 |        | NAV    | SYMBOL | FUNC   | SHIFT  |
- * |-----------------------------------------------------------------------------------------------------------|
- * |        |        |        |        |        |        |        |        |        |        |        |        |
- * .-----------------------------------------------------------------------------------------------------------.
- */
- [qw] = LAYOUT( \
-   UK_Q,    UK_W,    UK_E,    UK_R,    UK_T,                      UK_Y,    UK_U,    UK_I,    UK_O,    UK_P, \
-   UK_A,    UK_S,    UK_D,    UK_F,    UK_G,                      UK_H,    UK_J,    UK_K,    UK_L,    UK_SCLN, \
-   _Z_SFT,  _X_NB,   _C_SY,   _V_NAL,  UK_B,                      UK_N,    _M_NAR,  _COM_SY, _DOT_NB, _SLSH, \
-   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
+   KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, KC_SPC,  KC_ENT,  KC_DEL,  KC_BSPC, KC_RGUI, KC_RALT, KC_RCTL, KC_RSFT \
  ),
 
 /* Numbers _NB
@@ -135,15 +95,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * '-----------------------------------------------------------------------------------------------------------'
  */
  [nbl] = LAYOUT( \
-   _______, UK_F7,   UK_F8,   UK_F9,   UK_F10,                    _______, UK_7,    UK_8,    UK_9,    _______, \
-   _______, UK_F4,   UK_F5,   UK_F6,   UK_F11,                    _______, UK_4,    UK_5,    UK_6,    _______, \
-   _______, __NBL,   UK_F2,   UK_F3,   UK_F12,                    UK_0,    UK_1,    UK_2,    UK_3,    UK_DOT, \
+   _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,                    _______, UK_7,    UK_8,    UK_9,    _______, \
+   _______, KC_F4,   KC_F5,   KC_F6,   KC_F11,                    _______, UK_4,    UK_5,    UK_6,    _______, \
+   _______, __NBL,   KC_F2,   KC_F3,   KC_F12,                    UK_0,    UK_1,    UK_2,    UK_3,    UK_DOT, \
    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
  ),
  [nbr] = LAYOUT( \
-   _______, UK_F7,   UK_F8,   UK_F9,   UK_F10,                    _______, UK_7,    UK_8,    UK_9,    _______, \
-   _______, UK_F4,   UK_F5,   UK_F6,   UK_F11,                    _______, UK_4,    UK_5,    UK_6,    _______, \
-   _______, UK_F1,   UK_F2,   UK_F3,   UK_F12,                    UK_0,    UK_1,    UK_2,    __NBR,   UK_DOT, \
+   _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,                    _______, UK_7,    UK_8,    UK_9,    _______, \
+   _______, KC_F4,   KC_F5,   KC_F6,   KC_F11,                    _______, UK_4,    UK_5,    UK_6,    _______, \
+   _______, KC_F1,   KC_F2,   KC_F3,   KC_F12,                    UK_0,    UK_1,    UK_2,    __NBR,   UK_DOT, \
    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
  ),
 
@@ -184,15 +144,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * '-----------------------------------------------------------------------------------------------------------'
  */
  [nal] = LAYOUT( \
-   UK_ESC,  _C_LEFT, UK_UP,   _C_RGHT, _______,                   _______, UK_PSCR, UK_SLCK, UK_PAUS, DF(dv), \
-   UK_TAB,  UK_LEFT, UK_DOWN, UK_RGHT, _______,                   DF(cm),  UK_INS,  UK_HOME, UK_PGUP, _TERM, \
-   _S_TAB,  _A_LEFT, IJ_OMN,  __NAL,   _______,                   _______, UK_SLCK, UK_END,  UK_PGDN, DF(qw), \
+   KC_ESC,  _C_LEFT, KC_UP,   _C_RGHT, _______,                   _______, KC_PSCR, KC_SCRL, KC_PAUS, _______, \
+   KC_TAB,  KC_LEFT, KC_DOWN, KC_RGHT, _______,                   DF(cm),  KC_INS,  KC_HOME, KC_PGDN, _TERM, \
+   _S_TAB,  _A_LEFT, IJ_OMN,  __NAL,   _______,                   _______, KC_SCRL, KC_END,  KC_PGDN, _______, \
    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______  \
  ),
  [nar] = LAYOUT( \
-   UK_ESC,  _C_LEFT, UK_UP,   _C_RGHT, _______,                   _______, UK_PSCR, UK_SLCK, UK_PAUS, DF(dv), \
-   UK_TAB,  UK_LEFT, UK_DOWN, UK_RGHT, _______,                   DF(cm),  UK_INS,  UK_HOME, UK_PGUP, _TERM, \
-   _S_TAB,  _A_LEFT, IJ_OMN,  _A_RGHT, _______,                   _______, __NAR,   UK_END,  UK_PGDN, DF(qw), \
+   KC_ESC,  _C_LEFT, KC_UP,   _C_RGHT, _______,                   _______, KC_PSCR, KC_SCRL, KC_PAUS, _______, \
+   KC_TAB,  KC_LEFT, KC_DOWN, KC_RGHT, _______,                   DF(cm),  KC_INS,  KC_HOME, KC_PGDN, _TERM, \
+   _S_TAB,  _A_LEFT, IJ_OMN,  _A_RGHT, _______,                   _______, __NAR,   KC_END,  KC_PGDN, _______, \
    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______  \
  ),
 };
