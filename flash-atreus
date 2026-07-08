@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+qmk compile -kb atreus -km skewwhiffy
+qmk flash atreus_astar_skewwhiffy.hex -m atmega32u4
