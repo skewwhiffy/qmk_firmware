@@ -145,13 +145,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
  [nal] = LAYOUT( \
    KC_ESC,  _C_LEFT, KC_UP,   _C_RGHT, _______,                   _______, KC_PSCR, KC_SCRL, KC_PAUS, _______, \
-   KC_TAB,  KC_LEFT, KC_DOWN, KC_RGHT, _______,                   DF(cm),  KC_INS,  KC_HOME, KC_PGDN, _TERM, \
+   KC_TAB,  KC_LEFT, KC_DOWN, KC_RGHT, _______,                   DF(cm),  KC_INS,  KC_HOME, KC_PGUP, _TERM, \
    _S_TAB,  _A_LEFT, IJ_OMN,  __NAL,   _______,                   _______, KC_SCRL, KC_END,  KC_PGDN, _______, \
    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______  \
  ),
  [nar] = LAYOUT( \
    KC_ESC,  _C_LEFT, KC_UP,   _C_RGHT, _______,                   _______, KC_PSCR, KC_SCRL, KC_PAUS, _______, \
-   KC_TAB,  KC_LEFT, KC_DOWN, KC_RGHT, _______,                   DF(cm),  KC_INS,  KC_HOME, KC_PGDN, _TERM, \
+   KC_TAB,  KC_LEFT, KC_DOWN, KC_RGHT, _______,                   DF(cm),  KC_INS,  KC_HOME, KC_PGUP, _TERM, \
    _S_TAB,  _A_LEFT, IJ_OMN,  _A_RGHT, _______,                   _______, __NAR,   KC_END,  KC_PGDN, _______, \
    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______  \
  ),
